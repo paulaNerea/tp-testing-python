@@ -1,8 +1,11 @@
 # Trabajo Práctico: Pruebas de Software (Testing)
-### Integrantes: 
+
+**Integrantes:** 
 * Carretero, Miguel Ángel - 42718309
 * Gutierrez, Martina del Pilar - 45669770
 * Leal Villanueva, Paula Nerea - 45231642
+
+**Tecnologías utilizadas:** Python y Pytest.
 
 ## 🛠️ Entorno Virtual
 Para este proyecto configuramos un entorno virtual (`venv`). Esto funciona como una burbuja que aísla nuestro proyecto del resto de la computadora.
