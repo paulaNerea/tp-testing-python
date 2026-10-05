@@ -11,11 +11,11 @@ class Tienda:
         for producto in self.inventario:
             if producto.nombre == nombre:
                 return producto
-        return None
+        raise ValueError(f"No se encontró el producto {nombre}")
 
     def eliminar_producto(self, nombre):
         for producto in self.inventario:
             if producto.nombre == nombre:
                 self.inventario.remove(producto)
                 return True
-        return False
+        raise ValueError(f"No se encontró el producto {nombre}")
