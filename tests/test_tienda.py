@@ -1,3 +1,4 @@
+from unittest.mock import MagicMock
 from tienda import Tienda
 from producto import Producto
 import pytest
@@ -47,4 +48,16 @@ def test_eliminar_producto_no_existente_lanza_error():
         mi_tienda.eliminar_producto("Yougurt La Serenisima")
 
     assert str(info_error.value) == "No se encontró el producto Yougurt La Serenisima"
+
+def test_aplicar_descuento_con_mock():
+    mi_tienda = Tienda()
+
+    producto_mock = MagicMock()
+    producto_mock.nombre = "Gaseosa"
+    producto_mock.precio = 500.0  
+    mi_tienda.agregar_producto(producto_mock)
+
+    mi_tienda.aplicar_descuento("Gaseosa", 20)
+
+    producto_mock.actualizar_precio.assert_called_once_with(400.0)
     
