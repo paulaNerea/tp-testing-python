@@ -30,3 +30,10 @@ class Tienda:
 
         producto.actualizar_precio(nuevo_precio)
         return producto.precio
+
+    def calcular_total_carrito(self, carrito):
+        total = 0
+        for nombre in carrito:
+            producto = self.buscar_producto(nombre)
+            total += producto.precio
+        return total
